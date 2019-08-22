@@ -15,6 +15,31 @@
     {{/each}}
 </ul>
 
+<h2>Burgers that haven't been eaten</h2>
+
+<ul>
+ 
+  {{#each burgers}}
+  {{#unless devoured}}
+  {{> burgers/burger-block ate=true}}
+  {{!-- <button id="delete-btn">Delete</button> --}}
+  {{/unless}}
+  {{/each}}
+</ul>
+
+<h2>Burgers that have been eaten!</h2>
+
+<ul>
+  {{#each burgers}}
+  {{!-- <button id="delete-btn">Delete</button> --}}
+  {{#if devoured}}
+  {{> burgers/burger-block ate=false}}
+  {{!-- <button id="delete-btn">Delete</button> --}}
+  {{/if}}
+  {{/each}}
+</ul>
+
+
 
 
 

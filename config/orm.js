@@ -17,8 +17,8 @@ var orm = {
             cb(result);
         })
     },
-    updateOne: function(tableName, changeObj, condition, cb){
-        var queryString = `UPDATE ${tableName} SET ${changeObj} WHERE ${condition}`
+    updateOne: function(tableName, changeCol, changeVal, condition, cb){
+        var queryString = `UPDATE ${tableName} SET ${changeCol} = ${changeVal} WHERE ${condition}`
         connection.query(queryString, function(err, result){
             if (err) {throw err}
             cb(result);

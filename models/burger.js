@@ -11,8 +11,8 @@ var burger = {
             cb(res);
         })
     }, 
-    updateOne: function(changeObj, condition, cb){
-        orm.updateOne("burgers", changeObj, condition, function(res){
+    updateOne: function(changeCol, changeVal, condition, cb){
+        orm.updateOne("burgers", changeCol, changeVal, condition, function(res){
             cb(res);
         })
     }    
